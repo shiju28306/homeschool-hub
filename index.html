@@ -13,70 +13,144 @@
   <meta property="og:url" content="https://shiju28306.github.io/homeschool-hub/" />
   <meta property="og:image" content="https://shiju28306.github.io/homeschool-hub/assets/letter-a-preview.png" />
   <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Homeschool Hub",
-    "url": "https://shiju28306.github.io/homeschool-hub/",
-    "description": "Free printable colouring packs and resources for learning at home."
-  }
+  {"@context":"https://schema.org","@type":"WebSite","name":"Homeschool Hub","url":"https://shiju28306.github.io/homeschool-hub/","description":"Free printable colouring packs and resources for learning at home."}
   </script>
   <style>
-    :root { --ink:#1c1917; --muted:#57534e; --paper:#faf7f2; --card:#fff; --accent:#0f766e; --line:#e7e5e4; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: Georgia, "Times New Roman", serif; color:var(--ink); background:var(--paper); line-height:1.5; }
-    header { padding:2.5rem 1.25rem 1.5rem; max-width:900px; margin:0 auto; }
-    h1 { font-size:2rem; margin:0 0 .5rem; }
-    .tag { color:var(--accent); font-family: system-ui, sans-serif; font-size:.85rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase; }
-    p.lead { color:var(--muted); font-size:1.1rem; max-width:36rem; }
-    main { max-width:900px; margin:0 auto; padding:0 1.25rem 3rem; }
-    h2.section { font-size:1.35rem; margin:0 0 1rem; }
-    .grid { display:grid; gap:1.25rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
-    .card { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:0 1px 2px rgba(0,0,0,.04); }
-    .card img { width:100%; height:180px; object-fit:cover; background:#fff; display:block; }
-    .card .body { padding:1rem 1.1rem 1.25rem; }
-    .card h3 { font-size:1.15rem; margin:0 0 .35rem; }
-    .card p { margin:0 0 1rem; color:var(--muted); font-size:.95rem; }
-    a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; padding:.55rem 1rem; border-radius:999px; font-family:system-ui,sans-serif; font-size:.9rem; font-weight:600; }
-    a.btn:hover { filter:brightness(1.05); }
-    footer { max-width:900px; margin:0 auto; padding:1rem 1.25rem 2.5rem; color:var(--muted); font-family:system-ui,sans-serif; font-size:.85rem; }
-    .soon { opacity:.75; border-style:dashed; }
+    :root {
+      --ink:#1f2937; --muted:#6b7280; --paper:#fff9f0; --card:#ffffff;
+      --accent:#0d9488; --accent-dark:#0f766e; --sun:#fbbf24; --coral:#fb7185;
+      --line:#f3e8d8; --shadow:0 12px 30px rgba(28,25,23,.08);
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; color:var(--ink); background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, #fde68a55, transparent),
+        radial-gradient(ellipse 60% 40% at 100% 0%, #99f6e455, transparent),
+        var(--paper);
+      font-family:"Source Sans 3", system-ui, sans-serif; line-height:1.55;
+    }
+    .wrap { max-width:980px; margin:0 auto; padding:0 1.25rem; }
+    nav {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:1.1rem 0; gap:1rem;
+    }
+    .logo {
+      display:flex; align-items:center; gap:.6rem; font-weight:700;
+      font-family:Fraunces, Georgia, serif; font-size:1.15rem; text-decoration:none; color:var(--ink);
+    }
+    .mark {
+      width:2rem; height:2rem; border-radius:10px; background:linear-gradient(135deg,var(--sun),var(--coral));
+      display:grid; place-items:center; color:#fff; font-size:.95rem;
+    }
+    .pill {
+      font-size:.8rem; font-weight:600; color:var(--accent-dark); background:#ccfbf1;
+      padding:.35rem .75rem; border-radius:999px;
+    }
+    .hero {
+      padding:2.2rem 0 2.5rem; display:grid; gap:1.75rem;
+      grid-template-columns:1.2fr .8fr; align-items:center;
+    }
+    @media (max-width:760px){ .hero{grid-template-columns:1fr;} }
+    .hero h1 {
+      font-family:Fraunces, Georgia, serif; font-size:clamp(1.9rem,4vw,2.75rem);
+      line-height:1.15; margin:0 0 .85rem; letter-spacing:-.02em;
+    }
+    .hero p { margin:0 0 1.25rem; color:var(--muted); font-size:1.1rem; max-width:34rem; }
+    .cta {
+      display:inline-flex; align-items:center; gap:.4rem; background:var(--accent);
+      color:#fff; text-decoration:none; padding:.7rem 1.15rem; border-radius:999px;
+      font-weight:700; box-shadow:0 8px 20px rgba(13,148,136,.25);
+    }
+    .cta:hover { background:var(--accent-dark); }
+    .hero-card {
+      background:var(--card); border:1px solid var(--line); border-radius:22px;
+      padding:1.25rem; box-shadow:var(--shadow);
+    }
+    .hero-card strong { display:block; font-family:Fraunces, Georgia, serif; font-size:1.2rem; margin-bottom:.35rem; }
+    .stats { display:grid; grid-template-columns:1fr 1fr; gap:.75rem; margin-top:1rem; }
+    .stat { background:#fff7ed; border-radius:14px; padding:.75rem .85rem; }
+    .stat b { display:block; font-size:1.25rem; color:var(--accent-dark); }
+    .stat span { font-size:.85rem; color:var(--muted); }
+    section { padding:0 0 2.75rem; }
+    section h2 { font-family:Fraunces, Georgia, serif; font-size:1.55rem; margin:0 0 1rem; }
+    .grid { display:grid; gap:1.25rem; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); }
+    .card {
+      background:var(--card); border:1px solid var(--line); border-radius:20px; overflow:hidden;
+      box-shadow:var(--shadow); display:flex; flex-direction:column; transition:transform .15s ease;
+    }
+    .card:hover { transform:translateY(-3px); }
+    .card img { width:100%; height:190px; object-fit:cover; background:#fff; display:block; }
+    .card .body { padding:1.15rem 1.2rem 1.35rem; flex:1; display:flex; flex-direction:column; }
+    .card h3 { font-family:Fraunces, Georgia, serif; font-size:1.2rem; margin:0 0 .4rem; }
+    .card p { margin:0 0 1.1rem; color:var(--muted); flex:1; }
+    .btn {
+      align-self:start; display:inline-block; background:var(--ink); color:#fff; text-decoration:none;
+      padding:.55rem 1rem; border-radius:999px; font-size:.9rem; font-weight:700;
+    }
+    .btn:hover { background:var(--accent-dark); }
+    .soon { border-style:dashed; opacity:.9; box-shadow:none; }
+    .soon .body { padding-top:2rem; }
+    footer {
+      border-top:1px solid var(--line); padding:1.25rem 0 2.5rem; color:var(--muted); font-size:.9rem;
+    }
+    footer a { color:var(--accent-dark); }
   </style>
 </head>
 <body>
-  <header>
-    <div class="tag">Homeschool Hub</div>
-    <h1>Free homeschool printables for learning at home</h1>
-    <p class="lead">Download free colouring packs for early years — alphabet, numbers, and more. New resources added weekly.</p>
-  </header>
-  <main>
-    <h2 class="section">Free printable packs</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="assets/letter-a-preview.png" alt="Free kids alphabet colouring page showing outline letter A for Apple" width="400" height="180" />
-        <div class="body">
-          <h3>Kids Alphabet Colouring Pack (A–Z)</h3>
-          <p>26 outline letters with “A is for Apple” cues. Free PDF for ages ~3–7. Print at home.</p>
-          <a class="btn" href="assets/Kids-Alphabet-Colouring-Pack.pdf" download>Download alphabet PDF</a>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="./"><span class="mark">H</span> Homeschool Hub</a>
+      <span class="pill">Free printables</span>
+    </nav>
+    <header class="hero">
+      <div>
+        <h1>Warm, simple printables for learning at home</h1>
+        <p>Download free alphabet and numbers colouring packs for ages ~3–7. New resources added weekly — print and go.</p>
+        <a class="cta" href="#packs">Browse free packs ↓</a>
+      </div>
+      <aside class="hero-card">
+        <strong>Made for busy parents</strong>
+        <p style="margin:0;color:var(--muted);">Clear PDFs, outline letters kids can colour, and no account needed.</p>
+        <div class="stats">
+          <div class="stat"><b>2</b><span>packs live</span></div>
+          <div class="stat"><b>€0</b><span>to download</span></div>
         </div>
-      </article>
-      <article class="card">
-        <img src="assets/number-1-preview.png" alt="Free numbers colouring page showing outline number 1" width="400" height="180" />
-        <div class="body">
-          <h3>Kids Numbers Colouring Pack (1–10)</h3>
-          <p>Outline numbers one to ten for early maths practice. Free printable PDF.</p>
-          <a class="btn" href="assets/Kids-Numbers-1-10-Colouring-Pack.pdf" download>Download numbers PDF</a>
-        </div>
-      </article>
-      <article class="card soon">
-        <div class="body" style="padding-top:2rem;">
-          <h3>Coming next</h3>
-          <p>Sight-word flashcards · weekly nature journal page · numbers 11–20.</p>
-        </div>
-      </article>
-    </div>
-  </main>
-  <footer>Personal-use free printables · <a href="https://shiju28306.github.io/homeschool-hub/">Homeschool Hub</a></footer>
+      </aside>
+    </header>
+    <section id="packs">
+      <h2>Free printable packs</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="assets/letter-a-preview.png" alt="Free kids alphabet colouring page showing outline letter A for Apple" width="400" height="190" />
+          <div class="body">
+            <h3>Kids Alphabet Colouring Pack (A–Z)</h3>
+            <p>26 outline letters with “A is for Apple” cues. Print at home for early literacy fun.</p>
+            <a class="btn" href="assets/Kids-Alphabet-Colouring-Pack.pdf" download>Download alphabet PDF</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/number-1-preview.png" alt="Free numbers colouring page showing outline number 1" width="400" height="190" />
+          <div class="body">
+            <h3>Kids Numbers Colouring Pack (1–10)</h3>
+            <p>Outline numbers one to ten for early maths practice. Free printable PDF.</p>
+            <a class="btn" href="assets/Kids-Numbers-1-10-Colouring-Pack.pdf" download>Download numbers PDF</a>
+          </div>
+        </article>
+        <article class="card soon">
+          <div class="body">
+            <h3>Coming next</h3>
+            <p>Sight-word flashcards · weekly nature journal · numbers 11–20.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <footer>
+      Personal-use free printables · <a href="https://shiju28306.github.io/homeschool-hub/">Homeschool Hub</a>
+    </footer>
+  </div>
 </body>
 </html>
