@@ -136,6 +136,73 @@
     .class-card .links a { color:var(--accent-dark); text-decoration:none; font-weight:700; }
     .class-card .links a:hover { text-decoration:underline; }
     .class-card .links span { color:var(--muted); }
+
+    .request-panel {
+      background:var(--card); border:2px solid transparent; border-radius:22px;
+      padding:1.35rem 1.4rem 1.5rem; box-shadow:var(--shadow);
+      background-image:linear-gradient(#fff,#fff), linear-gradient(135deg,#0d9488,#38bdf8,#7c3aed,#f59e0b);
+      background-origin:border-box; background-clip:padding-box, border-box;
+    }
+    .request-panel .lede { margin:0 0 1.15rem; color:var(--muted); max-width:40rem; }
+    .request-form { display:grid; gap:1rem; }
+    .request-form .row { display:grid; gap:.85rem; grid-template-columns:1fr 1fr; }
+    @media (max-width:560px){ .request-form .row{grid-template-columns:1fr;} }
+    .request-form label.field {
+      display:flex; flex-direction:column; gap:.35rem;
+      font-weight:600; font-size:.92rem; color:var(--ink);
+    }
+    .request-form .hint { font-weight:400; color:var(--muted); font-size:.82rem; }
+    .request-form input[type="email"],
+    .request-form select,
+    .request-form textarea {
+      font:inherit; color:var(--ink); background:#fff7ed;
+      border:1.5px solid #fde68a; border-radius:12px;
+      padding:.65rem .8rem; width:100%;
+    }
+    .request-form textarea { min-height:7.5rem; resize:vertical; }
+    .request-form input:focus,
+    .request-form select:focus,
+    .request-form textarea:focus {
+      outline:2px solid var(--teal); outline-offset:1px; border-color:var(--teal);
+    }
+    .who-group {
+      display:flex; flex-wrap:wrap; gap:.6rem .9rem; align-items:center;
+      font-weight:400;
+    }
+    .who-group legend {
+      font-weight:600; font-size:.92rem; color:var(--ink); margin:0 0 .35rem; padding:0;
+    }
+    .who-option {
+      display:inline-flex; align-items:center; gap:.4rem;
+      background:#ccfbf1; border:1.5px solid #99f6e4; border-radius:999px;
+      padding:.4rem .9rem; cursor:pointer; font-weight:600; font-size:.9rem;
+    }
+    .who-option:has(input:checked) {
+      background:linear-gradient(90deg,#0d9488,#0891b2); color:#fff; border-color:transparent;
+    }
+    .who-option input { accent-color:var(--teal); }
+    .form-actions {
+      display:flex; flex-wrap:wrap; gap:.65rem; align-items:center; margin-top:.25rem;
+    }
+    .form-actions .btn-submit {
+      display:inline-flex; align-items:center; gap:.4rem; border:0; cursor:pointer;
+      background:linear-gradient(90deg,#0d9488,#38bdf8); color:#fff;
+      padding:.7rem 1.2rem; border-radius:999px; font:inherit; font-weight:700;
+      box-shadow:0 8px 20px rgba(13,148,136,.28);
+    }
+    .form-actions .btn-submit:hover { filter:brightness(1.06); }
+    .form-actions .btn-copy {
+      display:inline-flex; align-items:center; gap:.35rem; cursor:pointer;
+      background:#fff; color:var(--accent-dark); border:1.5px solid #ddd6fe;
+      padding:.62rem 1rem; border-radius:999px; font:inherit; font-weight:700; font-size:.9rem;
+    }
+    .form-actions .btn-copy:hover { background:#f5f3ff; }
+    .form-note { margin:.85rem 0 0; font-size:.88rem; color:var(--muted); max-width:40rem; }
+    .form-status {
+      margin:.65rem 0 0; font-size:.88rem; font-weight:600; color:var(--teal); min-height:1.2em;
+    }
+    .form-status[data-tone="error"] { color:var(--coral); }
+
     footer {
       border-top:1px solid var(--line); padding:1.25rem 0 2.5rem; color:var(--muted); font-size:.9rem;
     }
@@ -262,9 +329,178 @@
         </article>
       </div>
     </section>
+
+    <section id="request-materials" aria-labelledby="request-heading">
+      <div class="section-head">
+        <p class="tag">Tell us what you need</p>
+        <h2 id="request-heading">Request materials</h2>
+        <p>Requests go to Homeschool Hub — we review if it’s a good free printable, then make and publish it when appropriate. Not every ask will be built.</p>
+      </div>
+      <div class="request-panel">
+        <p class="lede">Parents and students welcome. Submit opens GitHub with your details filled in — confirm there to send it to the Homeschool Hub bot. You’ll need to be signed in to GitHub (or sign in when prompted).</p>
+        <form class="request-form" id="materials-request-form" novalidate>
+          <fieldset class="who-group" style="border:0;margin:0;padding:0;">
+            <legend>Who is requesting?</legend>
+            <label class="who-option"><input type="radio" name="who" value="Parent" checked /> Parent</label>
+            <label class="who-option"><input type="radio" name="who" value="Student" /> Student</label>
+          </fieldset>
+          <div class="row">
+            <label class="field">Age / stage <span class="hint">(optional)</span>
+              <select name="stage" id="request-stage">
+                <option value="">Any / not sure</option>
+                <option value="Ages 3–5 · Early years">Ages 3–5 · Early years</option>
+                <option value="Ages 5–7 · Primary 1–2">Ages 5–7 · Primary 1–2</option>
+                <option value="Ages 7–9 · Primary 3–4">Ages 7–9 · Primary 3–4</option>
+                <option value="Ages 9–11 · Primary 5–6">Ages 9–11 · Primary 5–6</option>
+                <option value="Ages 12+ · Secondary">Ages 12+ · Secondary</option>
+              </select>
+            </label>
+            <label class="field">Email for follow-up <span class="hint">(optional)</span>
+              <input type="email" name="email" id="request-email" placeholder="you@example.com" autocomplete="email" />
+            </label>
+          </div>
+          <label class="field">What do you need?
+            <span class="hint">Printables, subjects, topics — e.g. “sight words”, “fractions”, “nature journal”</span>
+            <textarea name="need" id="request-need" required placeholder="I’d love printables on…"></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn-submit">Submit request</button>
+            <button type="button" class="btn-copy" id="copy-request-btn">Copy request</button>
+          </div>
+          <p class="form-status" id="request-status" role="status" aria-live="polite"></p>
+          <p class="form-note"><strong>Submit request</strong> opens a prefilled GitHub issue — review and create it there so Homeschool Hub can see it. If you aren’t logged in, GitHub will ask you to sign in first. Prefer not to use GitHub? Use <strong>Copy request</strong> and paste it anywhere handy. We review each ask; not every request becomes a printable.</p>
+        </form>
+      </div>
+    </section>
+
     <footer>
       Personal-use free printables · <a href="https://shiju28306.github.io/homeschool-hub/">Homeschool Hub</a>
     </footer>
   </div>
+
+  <script>
+  (function () {
+    var ISSUE_BASE = "https://github.com/shiju28306/homeschool-hub/issues/new";
+    var ISSUE_LABEL = "materials-request";
+
+    var form = document.getElementById("materials-request-form");
+    var statusEl = document.getElementById("request-status");
+    var copyBtn = document.getElementById("copy-request-btn");
+    if (!form) return;
+
+    function selectedWho() {
+      var el = form.querySelector('input[name="who"]:checked');
+      return el ? el.value : "Parent";
+    }
+
+    function shortNeed(need) {
+      var oneLine = need.replace(/\s+/g, " ").trim();
+      if (oneLine.length <= 60) return oneLine;
+      return oneLine.slice(0, 57).replace(/\s+\S*$/, "").replace(/[.,;:]+$/, "") + "…";
+    }
+
+    function buildCopyBody() {
+      var who = selectedWho();
+      var stage = (form.stage.value || "Not specified").trim();
+      var need = (form.need.value || "").trim();
+      var email = (form.email.value || "").trim();
+      var lines = [
+        "Materials request from Homeschool Hub",
+        "",
+        "Who: " + who,
+        "Age/stage: " + stage,
+        "What they need:",
+        need || "(not provided)",
+        "",
+        "Follow-up email: " + (email || "not provided")
+      ];
+      return lines.join("\n");
+    }
+
+    function buildIssueBody() {
+      var who = selectedWho();
+      var stage = (form.stage.value || "Not specified").trim();
+      var need = (form.need.value || "").trim();
+      var email = (form.email.value || "").trim();
+      var lines = [
+        "## Materials request",
+        "",
+        "**Who:** " + who,
+        "",
+        "**Stage:** " + stage,
+        "",
+        "**Need:**",
+        need || "(not provided)",
+        "",
+        "**Email:** " + (email || "not provided"),
+        "",
+        "---",
+        "_Submitted via Homeschool Hub. The Homeschool Hub bot will review this request._"
+      ];
+      return lines.join("\n");
+    }
+
+    function setStatus(msg, tone) {
+      statusEl.textContent = msg || "";
+      statusEl.dataset.tone = tone || "";
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var need = (form.need.value || "").trim();
+      if (!need) {
+        setStatus("Please say what you need in a sentence or two.", "error");
+        form.need.focus();
+        return;
+      }
+      var title = "Materials request: " + shortNeed(need);
+      var body = buildIssueBody();
+      var href = ISSUE_BASE
+        + "?title=" + encodeURIComponent(title)
+        + "&body=" + encodeURIComponent(body)
+        + "&labels=" + encodeURIComponent(ISSUE_LABEL);
+      setStatus("Opening GitHub to confirm your request…");
+      window.open(href, "_blank", "noopener,noreferrer");
+    });
+
+    copyBtn.addEventListener("click", function () {
+      var need = (form.need.value || "").trim();
+      if (!need) {
+        setStatus("Add a short note about what you need, then copy.", "error");
+        form.need.focus();
+        return;
+      }
+      var text = buildCopyBody();
+      function done() {
+        setStatus("Copied — paste into a message or GitHub issue anytime.");
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(function () {
+          fallbackCopy(text, done);
+        });
+      } else {
+        fallbackCopy(text, done);
+      }
+    });
+
+    function fallbackCopy(text, done) {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand("copy");
+        done();
+      } catch (err) {
+        setStatus("Couldn’t copy automatically — select and copy the text yourself.", "error");
+      }
+      document.body.removeChild(ta);
+    }
+  })();
+  </script>
+
 </body>
 </html>
