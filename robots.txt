@@ -1,1 +1,3 @@
-User-agent: *\nAllow: /\nSitemap: https://shiju28306.github.io/homeschool-hub/sitemap.xml\n
+User-agent: *
+Allow: /
+Sitemap: https://shiju28306.github.io/homeschool-hub/sitemap.xml
