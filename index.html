@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Free Homeschool Printables — Alphabet &amp; Numbers Colouring Packs | Homeschool Hub</title>
-  <meta name="description" content="Free printable colouring packs for home learning: kids alphabet A–Z and numbers 1–10. Download PDFs for ages 3–7. New homeschool resources added weekly." />
+  <title>Free Homeschool Printables — Alphabet, Numbers &amp; Shapes | Homeschool Hub</title>
+  <meta name="description" content="Free printable colouring packs for home learning: kids alphabet A–Z, numbers 1–10, and shapes trace &amp; colour. Download PDFs for ages 3–7. New homeschool resources added weekly." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://shiju28306.github.io/homeschool-hub/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Free Homeschool Printables | Homeschool Hub" />
-  <meta property="og:description" content="Free alphabet and numbers colouring PDFs for ages 3–7. Print at home — new packs weekly." />
+  <meta property="og:description" content="Free alphabet, numbers, and shapes colouring PDFs for ages 3–7. Print at home — new packs weekly." />
   <meta property="og:url" content="https://shiju28306.github.io/homeschool-hub/" />
   <meta property="og:image" content="https://shiju28306.github.io/homeschool-hub/assets/letter-a-preview.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -23,7 +23,7 @@
     :root {
       --ink:#1e1b4b; --muted:#5b5675; --paper:#fff7ed; --card:#ffffff;
       --accent:#7c3aed; --accent-dark:#6d28d9; --sun:#f59e0b; --coral:#f43f5e;
-      --sky:#38bdf8; --lime:#84cc16; --line:#fde68a; --shadow:0 14px 34px rgba(124,58,237,.12);
+      --sky:#38bdf8; --lime:#84cc16; --teal:#0d9488; --line:#fde68a; --shadow:0 14px 34px rgba(124,58,237,.12);
     }
     * { box-sizing:border-box; }
     body {
@@ -91,6 +91,10 @@
       background-image:linear-gradient(#fff,#fff), linear-gradient(135deg,#38bdf8,#7c3aed,#ec4899);
       background-origin:border-box; background-clip:padding-box, border-box;
     }
+    .card:nth-child(3) {
+      background-image:linear-gradient(#fff,#fff), linear-gradient(135deg,#0d9488,#14b8a6,#38bdf8);
+      background-origin:border-box; background-clip:padding-box, border-box;
+    }
     .card:hover { transform:translateY(-3px); }
     .card img { width:100%; height:190px; object-fit:cover; background:#fff; display:block; }
     .card .body { padding:1.15rem 1.2rem 1.35rem; flex:1; display:flex; flex-direction:column; }
@@ -101,13 +105,39 @@
       color:#fff; text-decoration:none; padding:.55rem 1rem; border-radius:999px; font-size:.9rem; font-weight:700;
     }
     .card:nth-child(2) .btn { background:linear-gradient(90deg,#38bdf8,#7c3aed); }
+    .card:nth-child(3) .btn { background:linear-gradient(90deg,#0d9488,#0891b2); }
     .btn:hover { filter:brightness(1.05); }
     .soon { border-style:dashed; opacity:.9; box-shadow:none; }
     .soon .body { padding-top:2rem; }
+    .section-head { margin:0 0 1rem; }
+    .section-head .tag {
+      font-size:.75rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+      color:var(--teal); margin:0 0 .35rem;
+    }
+    .section-head p { margin:0; color:var(--muted); max-width:36rem; }
+    .classes-grid { display:grid; gap:1rem; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); }
+    .class-card {
+      background:var(--card); border:1px solid #fde68a; border-radius:16px;
+      padding:1rem 1.05rem 1.15rem; box-shadow:0 8px 20px rgba(124,58,237,.08);
+      display:flex; flex-direction:column; gap:.35rem;
+    }
+    .class-card .ages {
+      font-size:.75rem; font-weight:700; letter-spacing:.03em; text-transform:uppercase;
+      color:var(--teal); margin:0;
+    }
+    .class-card h3 { font-family:Fraunces, Georgia, serif; font-size:1.05rem; margin:0; }
+    .class-card p { margin:0; color:var(--muted); font-size:.88rem; flex:1; }
+    .class-card .links { margin-top:.5rem; font-size:.82rem; }
+    .class-card .links a { color:var(--accent-dark); text-decoration:none; font-weight:700; }
+    .class-card .links a:hover { text-decoration:underline; }
+    .class-card .links span { color:var(--muted); }
     footer {
       border-top:1px solid var(--line); padding:1.25rem 0 2.5rem; color:var(--muted); font-size:.9rem;
     }
     footer a { color:var(--accent-dark); }
+    @media (max-width:480px) {
+      .classes-grid { grid-template-columns:1fr 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -120,14 +150,14 @@
     <header class="hero">
       <div>
         <h1>Warm, simple printables for learning at home</h1>
-        <p>Download free alphabet and numbers colouring packs for ages ~3–7. New resources added weekly — print and go.</p>
+        <p>Download free alphabet, numbers, and shapes colouring packs for ages ~3–7. New resources added weekly — print and go.</p>
         <a class="cta" href="#packs">Browse free packs ↓</a>
       </div>
       <aside class="hero-card">
         <strong>Made for busy parents</strong>
         <p style="margin:0;color:var(--muted);">Clear PDFs, outline letters kids can colour, and no account needed.</p>
         <div class="stats">
-          <div class="stat"><b>2</b><span>packs live</span></div>
+          <div class="stat"><b>3</b><span>packs live</span></div>
           <div class="stat"><b>€0</b><span>to download</span></div>
         </div>
       </aside>
@@ -135,7 +165,7 @@
     <section id="packs">
       <h2>Free printable packs</h2>
       <div class="grid">
-        <article class="card">
+        <article class="card" id="alphabet-pack">
           <img src="assets/letter-a-preview.png" alt="Free kids alphabet colouring page showing outline letter A for Apple" width="400" height="190" />
           <div class="body">
             <h3>Kids Alphabet Colouring Pack (A–Z)</h3>
@@ -143,7 +173,7 @@
             <a class="btn" href="assets/Kids-Alphabet-Colouring-Pack.pdf" download>Download alphabet PDF</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="numbers-pack">
           <img src="assets/number-1-preview.png" alt="Free numbers colouring page showing outline number 1" width="400" height="190" />
           <div class="body">
             <h3>Kids Numbers Colouring Pack (1–10)</h3>
@@ -151,11 +181,67 @@
             <a class="btn" href="assets/Kids-Numbers-1-10-Colouring-Pack.pdf" download>Download numbers PDF</a>
           </div>
         </article>
+        <article class="card" id="shapes-pack">
+          <img src="assets/shapes-preview.png" alt="Free shapes trace and colour page showing dotted circle to trace" width="400" height="190" />
+          <div class="body">
+            <h3>Kids Shapes Trace &amp; Colour Pack</h3>
+            <p>2D basics: circle, square, triangle &amp; more — dotted trace paths plus outline colouring. Ages ~3–6.</p>
+            <a class="btn" href="assets/Kids-Shapes-Trace-Colour-Pack.pdf" download>Download shapes PDF</a>
+          </div>
+        </article>
         <article class="card soon">
           <div class="body">
             <h3>Coming next</h3>
             <p>Sight-word flashcards · weekly nature journal · numbers 11–20.</p>
           </div>
+        </article>
+      </div>
+    </section>
+    <section id="classes" aria-labelledby="classes-heading">
+      <div class="section-head">
+        <p class="tag">Browse by stage</p>
+        <h2 id="classes-heading">Classes</h2>
+        <p>Irish / UK-style age bands for home learning. Pick a stage to find printables suited to your learner.</p>
+      </div>
+      <div class="classes-grid">
+        <article class="class-card">
+          <p class="ages">Ages 3–5</p>
+          <h3>Early years</h3>
+          <p>Printables &amp; plans for this stage</p>
+          <div class="links">
+            <a href="#alphabet-pack">Alphabet</a>
+            <span aria-hidden="true"> · </span>
+            <a href="#numbers-pack">Numbers</a>
+            <span aria-hidden="true"> · </span>
+            <a href="#shapes-pack">Shapes</a>
+          </div>
+        </article>
+        <article class="class-card">
+          <p class="ages">Ages 5–7</p>
+          <h3>Primary 1–2</h3>
+          <p>Printables &amp; plans for this stage</p>
+          <div class="links">
+            <a href="#alphabet-pack">Alphabet</a>
+            <span aria-hidden="true"> · </span>
+            <a href="#numbers-pack">Numbers</a>
+            <span aria-hidden="true"> · </span>
+            <a href="#shapes-pack">Shapes</a>
+          </div>
+        </article>
+        <article class="class-card">
+          <p class="ages">Ages 7–9</p>
+          <h3>Primary 3–4</h3>
+          <p>Printables &amp; plans for this stage</p>
+        </article>
+        <article class="class-card">
+          <p class="ages">Ages 9–11</p>
+          <h3>Primary 5–6</h3>
+          <p>Printables &amp; plans for this stage</p>
+        </article>
+        <article class="class-card">
+          <p class="ages">Ages 12+</p>
+          <h3>Secondary</h3>
+          <p>Printables &amp; plans for this stage</p>
         </article>
       </div>
     </section>
