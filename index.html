@@ -23,6 +23,22 @@
     a.btn:hover { filter:brightness(1.05); }
     footer { max-width:900px; margin:0 auto; padding:1rem 1.25rem 2.5rem; color:var(--muted); font-family:system-ui,sans-serif; font-size:.85rem; }
     .soon { opacity:.75; border-style:dashed; }
+    .section { margin-top:2.75rem; }
+    .section-head { margin:0 0 1rem; }
+    .section-head h2 { font-size:1.45rem; margin:0 0 .35rem; }
+    .section-head p { margin:0; color:var(--muted); font-size:.95rem; max-width:36rem; }
+    .classes-grid { display:grid; gap:1rem; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+    .class-card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1rem 1.05rem 1.15rem; box-shadow:0 1px 2px rgba(0,0,0,.04); display:flex; flex-direction:column; gap:.35rem; }
+    .class-card .ages { font-family:system-ui,sans-serif; font-size:.75rem; font-weight:600; letter-spacing:.03em; text-transform:uppercase; color:var(--accent); margin:0; }
+    .class-card h3 { font-size:1.05rem; margin:0; }
+    .class-card p { margin:0; color:var(--muted); font-size:.88rem; flex:1; }
+    .class-card .links { margin-top:.5rem; font-family:system-ui,sans-serif; font-size:.82rem; }
+    .class-card .links a { color:var(--accent); text-decoration:none; font-weight:600; }
+    .class-card .links a:hover { text-decoration:underline; }
+    .class-card .links span { color:var(--muted); }
+    @media (max-width:480px) {
+      .classes-grid { grid-template-columns: 1fr 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -33,7 +49,7 @@
   </header>
   <main>
     <div class="grid">
-      <article class="card">
+      <article class="card" id="alphabet-pack">
         <img src="assets/letter-a-preview.png" alt="Alphabet colouring preview — letter A outline" />
         <div class="body">
           <h2>Kids Alphabet Colouring Pack</h2>
@@ -41,7 +57,7 @@
           <a class="btn" href="assets/Kids-Alphabet-Colouring-Pack.pdf" download>Download PDF</a>
         </div>
       </article>
-      <article class="card">
+      <article class="card" id="numbers-pack">
         <img src="assets/number-1-preview.png" alt="Numbers colouring preview — number 1 outline" />
         <div class="body">
           <h2>Kids Numbers 1–10 Colouring Pack</h2>
@@ -56,6 +72,51 @@
         </div>
       </article>
     </div>
+
+    <section class="section" id="classes" aria-labelledby="classes-heading">
+      <div class="section-head">
+        <div class="tag">Browse by stage</div>
+        <h2 id="classes-heading">Classes</h2>
+        <p>Irish / UK-style age bands for home learning. Pick a stage to find printables suited to your learner.</p>
+      </div>
+      <div class="classes-grid">
+        <article class="class-card">
+          <p class="ages">Ages 3–5</p>
+          <h3>Early years</h3>
+          <p>Printables &amp; plans for this stage</p>
+          <div class="links">
+            <a href="#alphabet-pack">Alphabet</a>
+            <span aria-hidden="true"> · </span>
+            <a href="#numbers-pack">Numbers</a>
+          </div>
+        </article>
+        <article class="class-card">
+          <p class="ages">Ages 5–7</p>
+          <h3>Primary 1–2</h3>
+          <p>Printables &amp; plans for this stage</p>
+          <div class="links">
+            <a href="#alphabet-pack">Alphabet</a>
+            <span aria-hidden="true"> · </span>
+            <a href="#numbers-pack">Numbers</a>
+          </div>
+        </article>
+        <article class="class-card">
+          <p class="ages">Ages 7–9</p>
+          <h3>Primary 3–4</h3>
+          <p>Printables &amp; plans for this stage</p>
+        </article>
+        <article class="class-card">
+          <p class="ages">Ages 9–11</p>
+          <h3>Primary 5–6</h3>
+          <p>Printables &amp; plans for this stage</p>
+        </article>
+        <article class="class-card">
+          <p class="ages">Ages 12+</p>
+          <h3>Secondary</h3>
+          <p>Printables &amp; plans for this stage</p>
+        </article>
+      </div>
+    </section>
   </main>
   <footer>Personal use printables · Homeschool Hub starter site</footer>
 </body>
