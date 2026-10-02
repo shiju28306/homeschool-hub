@@ -21,15 +21,16 @@
   </script>
   <style>
     :root {
-      --ink:#1f2937; --muted:#6b7280; --paper:#fff9f0; --card:#ffffff;
-      --accent:#0d9488; --accent-dark:#0f766e; --sun:#fbbf24; --coral:#fb7185;
-      --line:#f3e8d8; --shadow:0 12px 30px rgba(28,25,23,.08);
+      --ink:#1e1b4b; --muted:#5b5675; --paper:#fff7ed; --card:#ffffff;
+      --accent:#7c3aed; --accent-dark:#6d28d9; --sun:#f59e0b; --coral:#f43f5e;
+      --sky:#38bdf8; --lime:#84cc16; --line:#fde68a; --shadow:0 14px 34px rgba(124,58,237,.12);
     }
     * { box-sizing:border-box; }
     body {
       margin:0; color:var(--ink); background:
-        radial-gradient(ellipse 80% 50% at 10% -10%, #fde68a55, transparent),
-        radial-gradient(ellipse 60% 40% at 100% 0%, #99f6e455, transparent),
+        radial-gradient(ellipse 70% 55% at 0% 0%, #fda4af66, transparent),
+        radial-gradient(ellipse 65% 50% at 100% -5%, #c4b5fd88, transparent),
+        radial-gradient(ellipse 50% 40% at 50% 100%, #86efac55, transparent),
         var(--paper);
       font-family:"Source Sans 3", system-ui, sans-serif; line-height:1.55;
     }
@@ -47,8 +48,8 @@
       display:grid; place-items:center; color:#fff; font-size:.95rem;
     }
     .pill {
-      font-size:.8rem; font-weight:600; color:var(--accent-dark); background:#ccfbf1;
-      padding:.35rem .75rem; border-radius:999px;
+      font-size:.8rem; font-weight:600; color:#fff; background:linear-gradient(90deg,#f43f5e,#f59e0b,#84cc16);
+      padding:.35rem .85rem; border-radius:999px;
     }
     .hero {
       padding:2.2rem 0 2.5rem; display:grid; gap:1.75rem;
@@ -61,26 +62,34 @@
     }
     .hero p { margin:0 0 1.25rem; color:var(--muted); font-size:1.1rem; max-width:34rem; }
     .cta {
-      display:inline-flex; align-items:center; gap:.4rem; background:var(--accent);
+      display:inline-flex; align-items:center; gap:.4rem; background:linear-gradient(90deg,#7c3aed,#ec4899);
       color:#fff; text-decoration:none; padding:.7rem 1.15rem; border-radius:999px;
-      font-weight:700; box-shadow:0 8px 20px rgba(13,148,136,.25);
+      font-weight:700; box-shadow:0 10px 24px rgba(124,58,237,.35);
     }
-    .cta:hover { background:var(--accent-dark); }
+    .cta:hover { filter:brightness(1.06); }
     .hero-card {
       background:var(--card); border:1px solid var(--line); border-radius:22px;
       padding:1.25rem; box-shadow:var(--shadow);
     }
     .hero-card strong { display:block; font-family:Fraunces, Georgia, serif; font-size:1.2rem; margin-bottom:.35rem; }
     .stats { display:grid; grid-template-columns:1fr 1fr; gap:.75rem; margin-top:1rem; }
-    .stat { background:#fff7ed; border-radius:14px; padding:.75rem .85rem; }
+    .stat { border-radius:14px; padding:.75rem .85rem; }
+    .stat:first-child { background:#fce7f3; }
+    .stat:last-child { background:#dbeafe; }
     .stat b { display:block; font-size:1.25rem; color:var(--accent-dark); }
     .stat span { font-size:.85rem; color:var(--muted); }
     section { padding:0 0 2.75rem; }
     section h2 { font-family:Fraunces, Georgia, serif; font-size:1.55rem; margin:0 0 1rem; }
     .grid { display:grid; gap:1.25rem; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); }
     .card {
-      background:var(--card); border:1px solid var(--line); border-radius:20px; overflow:hidden;
+      background:var(--card); border:2px solid transparent; border-radius:20px; overflow:hidden;
       box-shadow:var(--shadow); display:flex; flex-direction:column; transition:transform .15s ease;
+      background-image:linear-gradient(#fff,#fff), linear-gradient(135deg,#f43f5e,#f59e0b,#84cc16,#38bdf8,#7c3aed);
+      background-origin:border-box; background-clip:padding-box, border-box;
+    }
+    .card:nth-child(2) {
+      background-image:linear-gradient(#fff,#fff), linear-gradient(135deg,#38bdf8,#7c3aed,#ec4899);
+      background-origin:border-box; background-clip:padding-box, border-box;
     }
     .card:hover { transform:translateY(-3px); }
     .card img { width:100%; height:190px; object-fit:cover; background:#fff; display:block; }
@@ -88,10 +97,11 @@
     .card h3 { font-family:Fraunces, Georgia, serif; font-size:1.2rem; margin:0 0 .4rem; }
     .card p { margin:0 0 1.1rem; color:var(--muted); flex:1; }
     .btn {
-      align-self:start; display:inline-block; background:var(--ink); color:#fff; text-decoration:none;
-      padding:.55rem 1rem; border-radius:999px; font-size:.9rem; font-weight:700;
+      align-self:start; display:inline-block; background:linear-gradient(90deg,#f59e0b,#f43f5e);
+      color:#fff; text-decoration:none; padding:.55rem 1rem; border-radius:999px; font-size:.9rem; font-weight:700;
     }
-    .btn:hover { background:var(--accent-dark); }
+    .card:nth-child(2) .btn { background:linear-gradient(90deg,#38bdf8,#7c3aed); }
+    .btn:hover { filter:brightness(1.05); }
     .soon { border-style:dashed; opacity:.9; box-shadow:none; }
     .soon .body { padding-top:2rem; }
     footer {
