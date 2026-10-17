@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Free Homeschool Printables — Alphabet, Letter Formation, Beginning Sounds, CVC Words, Numbers 1–20, Sight Words, Nature Journal, Shapes, Scissors, Colours, Patterns, Pre-Writing &amp; Pencil Mazes | Homeschool Hub</title>
+  <title>Free Homeschool Printables for Ages 3–8 | Homeschool Hub</title>
   <meta name="description" content="Free printable packs for home learning: kids alphabet A–Z, letter formation practice A–Z, beginning sounds match (s a t p i n), CVC words (short a, i, o), numbers 1–10 &amp; 11–20 (trace, count &amp; ten frames), Dolch Pre-Primer sight-word flashcards, nature observation journal, shapes, scissor skills, colours match &amp; sort, patterns complete &amp; create, pre-writing lines trace, and pencil-control path mazes. Download PDFs for ages 3–8. New homeschool resources most weeks." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://shiju28306.github.io/homeschool-hub/" />
@@ -294,7 +294,6 @@
 </head>
 <body>
   <div class="wrap">
-    <div class="colour-update-banner" style="background:linear-gradient(90deg,#ef4444,#f59e0b,#22c55e,#3b82f6,#a855f7);color:#fff;text-align:center;font-weight:700;padding:.55rem 1rem;font-family:system-ui,sans-serif;font-size:.95rem;">New colourful look is live — if you still see teal, hard-refresh (Ctrl+Shift+R)</div>
     <nav>
       <a class="logo" href="./"><span class="mark">H</span> Homeschool Hub</a>
       <span class="pill">Free printables</span>
@@ -302,14 +301,14 @@
     <header class="hero">
       <div>
         <h1>Warm, simple printables for learning at home</h1>
-        <p>Download free alphabet, letter formation, beginning sounds, CVC words, numbers 1–20, sight-word flashcards, nature observation journal, shapes, scissors, colours, patterns, pre-writing, and pencil-control path mazes for ages ~3–8. New resources most weeks — print and go.</p>
+        <p>Explore free printable activities for early reading, numbers and pencil skills, for ages approximately 3–8. Choose a pack, download the PDF and learn together at your child’s pace.</p>
         <a class="cta" href="#packs">Browse free packs ↓</a>
       </div>
       <aside class="hero-card">
         <strong>Made for busy parents</strong>
         <p style="margin:0;color:var(--muted);">Clear PDFs, outline letters kids can colour, and no account needed.</p>
         <div class="stats">
-          <div class="stat"><b>14</b><span>packs live</span></div>
+          <div class="stat"><b>21</b><span>packs live</span></div>
           <div class="stat"><b>€0</b><span>to download</span></div>
         </div>
       </aside>
@@ -639,12 +638,12 @@
         <p>Requests go to Homeschool Research first. They review each ask; when it’s a good fit, they brief Homeschool Hub to make and publish a free printable. Not every ask will be built.</p>
       </div>
       <div class="request-panel">
-        <p class="lede">Parents and students welcome. Submit opens GitHub with your details filled in — confirm there to send it to the Homeschool Hub bot. You’ll need to be signed in to GitHub (or sign in when prompted).</p>
+        <p class="lede">For parents, carers and educators. Requests are public on GitHub. Do not include names of children, email addresses, school details or other personal information. Submit opens a draft for you to review and confirm on GitHub; you will need a GitHub account.</p>
         <form class="request-form" id="materials-request-form" novalidate>
           <fieldset class="who-group" style="border:0;margin:0;padding:0;">
             <legend>Who is requesting?</legend>
             <label class="who-option"><input type="radio" name="who" value="Parent" checked /> Parent</label>
-            <label class="who-option"><input type="radio" name="who" value="Student" /> Student</label>
+            <label class="who-option"><input type="radio" name="who" value="Educator" /> Educator</label>
           </fieldset>
           <div class="row">
             <label class="field">Age / stage <span class="hint">(optional)</span>
@@ -656,9 +655,6 @@
                 <option value="Ages 9–11 · Primary 5–6">Ages 9–11 · Primary 5–6</option>
                 <option value="Ages 12+ · Secondary">Ages 12+ · Secondary</option>
               </select>
-            </label>
-            <label class="field">Email for follow-up <span class="hint">(optional)</span>
-              <input type="email" name="email" id="request-email" placeholder="you@example.com" autocomplete="email" />
             </label>
           </div>
           <label class="field">What do you need?
@@ -726,16 +722,13 @@
       var who = selectedWho();
       var stage = (form.stage.value || "Not specified").trim();
       var need = (form.need.value || "").trim();
-      var email = (form.email.value || "").trim();
       var lines = [
         "Materials request from Homeschool Hub",
         "",
         "Who: " + who,
         "Age/stage: " + stage,
         "What they need:",
-        need || "(not provided)",
-        "",
-        "Follow-up email: " + (email || "not provided")
+        need || "(not provided)"
       ];
       return lines.join("\n");
     }
@@ -744,7 +737,6 @@
       var who = selectedWho();
       var stage = (form.stage.value || "Not specified").trim();
       var need = (form.need.value || "").trim();
-      var email = (form.email.value || "").trim();
       var lines = [
         "## Materials request",
         "",
@@ -754,8 +746,6 @@
         "",
         "**Need:**",
         need || "(not provided)",
-        "",
-        "**Email:** " + (email || "not provided"),
         "",
         "---",
         "_Submitted via Homeschool Hub. Homeschool Research will review this request; if it’s a fit, Homeschool Hub may build it._"
@@ -815,7 +805,7 @@
       document.body.appendChild(ta);
       ta.select();
       try {
-        document.execCommand("copy");
+        if (!document.execCommand("copy")) throw new Error("Copy failed");
         done();
       } catch (err) {
         setStatus("Couldn’t copy automatically — select and copy the text yourself.", "error");
@@ -889,7 +879,7 @@
       document.body.appendChild(ta);
       ta.select();
       try {
-        document.execCommand("copy");
+        if (!document.execCommand("copy")) throw new Error("Copy failed");
         done();
       } catch (err) {
         setStatus("Couldn’t copy — signup email is " + NEWSLETTER_EMAIL, "error");
