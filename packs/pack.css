@@ -71,3 +71,26 @@ footer {
   border-top:1px solid var(--line); padding:1.25rem 0 2.5rem; color:var(--muted); font-size:.9rem;
 }
 footer a { color:var(--accent-dark); }
+
+
+/* Editorial resource library, October 2026. */
+:root{--ink:#183e35;--muted:#586960;--paper:#faf7ef;--accent:#245448;--accent-dark:#183e35;--line:#dddcd0;--teal:#245448;--shadow:0 18px 50px rgba(24,62,53,.07)}
+body{background:var(--paper);color:var(--ink)}
+.wrap{max-width:1180px;padding:0 28px}
+nav{padding:28px 0;border-bottom:1px solid var(--line);margin-bottom:46px}
+.logo{font-size:1.35rem;letter-spacing:-.04em}
+.mark{background:var(--ink);border-radius:50%;width:38px;height:38px}
+.pill{background:#e6eddd;color:var(--ink);padding:8px 14px}
+.pack{background:#fff;border:1px solid var(--line);border-radius:24px;padding:48px;gap:48px;box-shadow:var(--shadow);align-items:center;min-height:460px;margin-bottom:60px}
+.pack h1{font-size:clamp(2rem,4.5vw,3.4rem);letter-spacing:-.045em;line-height:1.08;margin:12px 0 22px}
+.tag{letter-spacing:.13em;font-size:.72rem}
+.ages{background:#f6e4d2;color:#6c432b}
+.pack p{line-height:1.75}
+.btn{background:var(--ink);border-radius:10px;box-shadow:none;padding:14px 20px}
+.btn:hover{background:#2c6555}
+.preview{margin:0;padding:18px;background:#f1eddf;box-shadow:0 14px 24px #183e3512;transform:rotate(2deg)}
+.preview img{border-radius:6px;box-shadow:0 4px 12px #183e3512}
+a:focus-visible{outline:3px solid #b95c35;outline-offset:5px}
+footer{font-size:.95rem;padding:26px 0}
+@media(max-width:760px){.wrap{padding:0 20px}nav{margin-bottom:26px;gap:12px}.logo{font-size:1.1rem}.pack{padding:28px 22px;gap:28px}.preview{transform:none}.actions{align-items:stretch}.btn{text-align:center}.pill{font-size:.7rem}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
