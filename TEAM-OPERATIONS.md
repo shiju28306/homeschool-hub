@@ -195,3 +195,9 @@ Agents share findings with the lead; only the lead publishes. If specialist agen
 - Independent quality review verified every model, exercise, answer, and parent instruction and visually inspected a fresh render of all four A4 pages. No clipping, overlap, spelling issue, or ambiguous illustration was found. The PDF and preview hashes recorded on Day 2 are unchanged.
 - Added the homepage card, PDF link, age 5–7 navigation entry, and sitemap URL. The independent integration audit confirmed all 374 relative references across 29 HTML pages resolve, no duplicate IDs, all previous resources remain, and the homepage count matches the 28 packs.
 - Publishing uses the existing public GitHub Pages deployment. The lead owns publication and records the deployment and live byte checks on the cycle branch. Traffic, downloads, and sales remain unknown.
+
+### Publication verified on 4 November 2026
+
+- PR #4 merged into main as 43bd73e0c5a181b07e18aea8e8a3133a01f50e5e. GitHub Pages run 41797260880 succeeded.
+- The public homepage, sitemap, pack page, PDF, and preview each returned HTTP 200 and matched the checked release files byte for byte. Live resource: https://shiju28306.github.io/homeschool-hub/packs/halves.html .
+- Cycle complete. Do not republish this pack. Start a new draft cycle after checking current main, branches, and open PRs for overlap.
