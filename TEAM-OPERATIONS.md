@@ -229,3 +229,9 @@ Agents share findings with the lead; only the lead publishes. If specialist agen
 - Desktop browser preview of the pack page inspected. Guidance and illustration are readable with no observed clipping. Mobile viewport was not separately tested.
 - Current official GitHub billing guidance confirms standard public-repository and GitHub Pages runners are free, checked 7 November at https://docs.github.com/en/billing/concepts/product-billing/github-actions . Existing public Pages deployment retained, with no custom runner or workflow added. Included tools and installed local rendering used.
 - Lead owns publication. Remaining gates are fresh branch/head/status checks, merge and successful Pages deployment followed by byte comparison of the public homepage, sitemap, pack page, PDF and preview. Final outcome will be retained on this cycle branch. Do not start a new cycle before live verification succeeds.
+
+### Publication verified on 7 November 2026
+
+- PR #5 merged as main 52786523e77e7349e51a03153010344d90a8eecc. GitHub Pages run 42355357148 completed successfully.
+- The public homepage, sitemap, pack page, PDF and preview each returned HTTP 200 and matched the checked release files byte for byte. Live resource https://shiju28306.github.io/homeschool-hub/packs/listening-clues.html .
+- Cycle complete, with 29 free packs published. Do not duplicate this resource. Begin the next draft cycle after a fresh source/history/branches/PR audit. Traffic, downloads and sales remain unknown.
