@@ -265,3 +265,9 @@ Agents share findings with the lead; only the lead publishes. If specialist agen
 - Desktop browser pack page visually inspected with readable text, preview and download. Mobile viewport not separately tested.
 - Zero-cost publishing recheck 10 November used official GitHub billing guidance confirming free standard public-repository and Pages runners at https://docs.github.com/en/billing/concepts/product-billing/github-actions . Existing Pages workflow retained. Included tools and installed local libraries used.
 - Lead owns publication. Remaining steps are fresh head/main/status checks, merge, successful Pages deployment and live byte comparison. Outcome will be retained on this cycle branch. Traffic, download interest and sales remain unknown.
+
+### Publication verified 10 November 2026
+
+- PR #6 merged as main c034d565625f65a079841304cd524cbe2c0032bd. GitHub Pages run 42786448124 completed successfully.
+- Homepage, sitemap, pack page, PDF and preview each returned HTTP 200 and matched checked release files byte for byte. Live resource https://shiju28306.github.io/homeschool-hub/packs/counting-in-twos.html .
+- This cycle is complete with 30 free packs. Do not republish Count in Twos. Start the next draft cycle after a fresh repository audit. Traffic, download interest and sales remain unknown.
