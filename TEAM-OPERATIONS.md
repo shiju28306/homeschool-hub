@@ -288,3 +288,11 @@ Agents share findings with the lead; only the lead publishes. If specialist agen
 - Measurement reference checked 12 November. Google Search Console's Performance report can show search impressions and clicks by page if an existing verified property is accessible (https://support.google.com/webmasters/answer/7576553). These metrics cover Google Search and cannot count PDF downloads from the site. GitHub's repository traffic report measures repository views and clones (https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository). Access to existing Search Console data is unverified. Site visits, download interest, sales and the paid-product hypothesis remain unmeasured.
 - Review used included GitHub and specialist tools and installed rendering. Publication and browser layout remain pending.
 - Independent discoverability review also passed all nine relative references, metadata, parent copy and preview alt. Fresh text search across 30 existing PDFs found no word-chain or one-letter substitution activity. Day 3 navigation follows CVC Words in Ages 5–7 with the existing middle-dot separators.
+
+## 2026-11-13 cycle — Day 3 final checks passed
+
+- Reviewed draft 1cca616b46f8dbf34ee1700d72bdada9edc281ab. Fresh main c034d565625f65a079841304cd524cbe2c0032bd, only open PR #7, unprotected branches, empty rulesets. No overlapping work, applicable AGENTS.md or custom workflow found.
+- Independent quality review freshly rendered and inspected every A4 page for black-and-white clarity, readable writing boxes and margins. All letter changes, spellings, answers and parent instructions passed. PDF and preview match Day 2 hashes and all four resource paths match Day 1 bytes.
+- Integrated homepage card, download and Ages 5–7 link immediately after CVC Words. Audit passed for 417 relative references across 32 HTML pages, 31 pack cards and 32 unique sitemap entries, preserving previous entries. Scripts parse. Desktop pack preview visually checked. Mobile layout was not separately tested.
+- GitHub billing guidance checked 13 November confirms free standard runners on public repositories and for Pages. The existing Pages deployment is used. https://docs.github.com/en/billing/concepts/product-billing/github-actions
+- Lead owns publication. Fresh checks and deployment followed by live byte comparison will complete the cycle.
