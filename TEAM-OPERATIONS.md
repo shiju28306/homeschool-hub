@@ -296,3 +296,9 @@ Agents share findings with the lead; only the lead publishes. If specialist agen
 - Integrated homepage card, download and Ages 5–7 link immediately after CVC Words. Audit passed for 417 relative references across 32 HTML pages, 31 pack cards and 32 unique sitemap entries, preserving previous entries. Scripts parse. Desktop pack preview visually checked. Mobile layout was not separately tested.
 - GitHub billing guidance checked 13 November confirms free standard runners on public repositories and for Pages. The existing Pages deployment is used. https://docs.github.com/en/billing/concepts/product-billing/github-actions
 - Lead owns publication. Fresh checks and deployment followed by live byte comparison will complete the cycle.
+
+### Publication verified 13 November 2026
+
+- PR #7 merged as 2a0923419e845065d26fd449bf4bc92c6a6b5fba. GitHub Pages run 43396645988 succeeded.
+- The public homepage, sitemap, resource page, PDF and preview each returned 200 and matched the reviewed release files byte for byte. Live resource https://shiju28306.github.io/homeschool-hub/packs/cvc-word-chains.html .
+- Cycle complete with 31 free packs. The next cycle starts with a fresh repository audit and a new resource. Traffic, download interest and sales remain unknown.
