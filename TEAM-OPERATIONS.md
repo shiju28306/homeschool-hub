@@ -327,3 +327,9 @@ Agents share findings with the lead; only the lead publishes. If specialist agen
 - Added the homepage pack card and download, Ages 5–7 navigation and sitemap entry. Both audits verified 431 relative references across 33 HTML pages, 32 packs and 33 unique sitemap URLs, preserving previous entries. Scripts and JSON-LD parse. Desktop preview passed visual inspection. Mobile layout awaits separate testing.
 - Checked official GitHub billing documentation on 16 November. Standard runners for public repositories and GitHub Pages remain free. Existing deployment and included tools used. https://docs.github.com/en/billing/concepts/product-billing/github-actions
 - Lead owns publication and live byte comparison.
+
+### Publication verified 16 November 2026
+
+- PR #8 merged as 6595eb80ecfd665eba169aeebc8a38f27a23fab0. GitHub Pages run 43831107528 succeeded.
+- The public homepage, sitemap, resource page, PDF and preview all returned 200 and matched checked files byte for byte. The live browser page displayed the parent instructions, preview and download. https://shiju28306.github.io/homeschool-hub/packs/picture-map.html
+- Cycle complete with 32 free packs. Start the next cycle after a fresh repository audit. Visits, download interest and sales remain unknown.
