@@ -319,3 +319,11 @@ Agents share findings with the lead; only the lead publishes. If specialist agen
 - Day 3 target 16 November. Check fresh history, overlap, branch protections and required checks. Add homepage card and download, Ages 5–7 navigation, update count to 32 and add sitemap entry. Check layout and links, publish the reviewed files after checks pass and verify deployment and live bytes. Browser layout and publication remain pending.
 - Included tools and local rendering used. Traffic, download interest, price acceptance and sales remain unmeasured. Business backlog retains the Number Confidence hypothesis.
 - Independent web review passed all nine relative references, metadata and preview alt. A fresh catalogue text search confirmed the map key and ordered routes fill a gap. Day 3 navigation can sit between Comparing lengths and Picture graphs in Ages 5–7 with the existing middle-dot separators.
+
+## 2026-11-16 cycle — Day 3 final checks passed
+
+- Final draft 253706eb2509bc75f66f6d6cc9115a8b7484ae4f. Fresh main 2a0923419e845065d26fd449bf4bc92c6a6b5fba. PR #8 was the only open PR. No competing work, applicable AGENTS.md, rulesets or custom workflows were found. Both branches were unprotected.
+- Independent reviewer rerendered and inspected all four A4 pages. Every route, destination and alternate answer passed, as did arrow and key clarity, margins and black-and-white readability. PDF and preview hashes match Day 2, and all four resource paths match the Day 1 bytes.
+- Added the homepage pack card and download, Ages 5–7 navigation and sitemap entry. Both audits verified 431 relative references across 33 HTML pages, 32 packs and 33 unique sitemap URLs, preserving previous entries. Scripts and JSON-LD parse. Desktop preview passed visual inspection. Mobile layout awaits separate testing.
+- Checked official GitHub billing documentation on 16 November. Standard runners for public repositories and GitHub Pages remain free. Existing deployment and included tools used. https://docs.github.com/en/billing/concepts/product-billing/github-actions
+- Lead owns publication and live byte comparison.
