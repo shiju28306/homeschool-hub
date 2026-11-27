@@ -18,7 +18,7 @@ Earlier logs through the 25 November prepublication check are preserved byte-for
 ## Previous cycle — completed
 Sentence Detective published 25 November via PR #11 as a21073355c295763c305090f278f948bab8128f1. Pages run 45576668987 succeeded; homepage, sitemap, page, PDF and preview matched reviewed bytes. Outcome retained at f91ca3818c60c39e05b5d1058b1a6c29b89c8517 on codex/cycle-2026-11-23-sentence-detective. Catalogue has 35 free packs. Do not publish it again on retry.
 
-## Active cycle — 26 November, Day 1 complete; DRAFT ONLY
+## Active cycle — 27 November, Day 2 review passed; DRAFT ONLY
 - Title: Mirror the Pattern: Line Symmetry on a Grid. Ages about 6–8 with adult reading/shading support; readiness is following a row and pointing to a square.
 - Base main a21073355c295763c305090f278f948bab8128f1. Fresh source, history, branches, open PRs and rulesets inspected before changes: no open PRs, overlapping work, applicable AGENTS.md or custom workflow. Grok schedule unverified.
 - Branch codex/cycle-2026-11-26-mirror-pattern. Exact resource commit c4cbea73c6f4d114205f9e7858d9fcb755233f4b. Retrieve this cycle branch's latest record and verify resource hashes; do not restart.
@@ -28,9 +28,19 @@ Sentence Detective published 25 November via PR #11 as a21073355c295763c305090f2
 - Four A4 pages: parent model, three Yes/No checks, three 4-by-4 grids to complete, drawn answers/support. Vertical mirror line between columns 2 and 3. Production coordinates: reflect columns 1 to 4 and 2 to 3, same row.
 - Model left r1c2/r3c1, reflected right r1c3/r3c4. Page 2 A Yes, B No (second-row distance wrong), C Yes. Page 3 left givens A r1c2/r2c1/r4c2; B r1c1/r2c1/r3c2/r4c1; C r1c1/r1c2/r2c2/r3c1. Drawn answers correctly reflect every given and empty cell.
 - Preliminary independent reviewer freshly rendered all four pages at 1400 pixels and inspected each plus preview. Every grid cell, answer, instruction and age guidance passed. Dashed mirror line, print clarity, response room, margins and no clipping/overlap passed. Lead checked text margins and nine relative references. Independent web review passed all nine references, metadata/canonical, parent copy and preview. No corrections needed. This preliminary check does not replace Day 2.
-- Day 2 target 27 November: retrieve exact saved files/hashes; independently check every question/answer, freshly render and visually inspect EVERY page, correct and repeat affected checks. Record exact checked commit and remaining issues.
+- Day 2 completed 27 November on exact saved draft 79ed4d690706fa8ddbc2a0961fa4dd8bba9a7e34; detailed review below. All four resource files remain the exact Day 1 bytes. PR #12 remains a draft.
 - Day 3 target 28 November, subject to checks: freshly inspect main, overlap, protections/checks and deployment costs; verify reviewed bytes; add homepage card/download, count 35 to 36 and sitemap entry. Add Mirror patterns after Halves in Ages 5–7 with existing separators; add Mirror patterns (ages about 6–8) as an entry in Ages 7–9, without implying complete stage coverage. Check all links/layout, publish only if gates pass, verify successful deployment and exact live bytes.
 - Homepage/sitemap unchanged today. Eventual path /homeschool-hub/packs/mirror-pattern.html is NOT LIVE. Browser layout and publication pending. No PDF defects currently unresolved. Included tools and installed local rendering used; no deployment or metered service added.
+
+
+## Day 2 review — 27 November
+Fresh main a21073355c295763c305090f278f948bab8128f1 still has 35 packs. Inspected source, recent commits, branches, open PRs and rulesets before changes: PR #12 is the only open PR; no overlapping work, applicable AGENTS.md or custom workflows found. Grok schedule remains unverified.
+
+Independent reviewer freshly rendered all four pages at 1400 pixels and individually inspected each plus preview. Every shaded and empty cell was checked against reflection in the same row (columns 1/4 and 2/3). Model and page 2 Yes/No/Yes answers correct; B's second-row mismatch explanation correct. Page 3 right-side answers: A r1c3/r2c4/r4c3; B r1c4/r2c4/r3c3/r4c4; C r1c3/r1c4/r2c3/r3c4. All remaining cells stay empty. Every instruction, spelling and parent prompt passed for ages about 6–8 with adult support.
+
+Dashed mirror line, cell borders, black-and-white shading, response space, margins and no clipping/overlap passed. Lead separately confirmed four A4 pages and all text margins. No corrections needed. PDF and preview match the hashes above; all four resource paths match c4cbea73c6f4d114205f9e7858d9fcb755233f4b. Historical archive also matches prior log bytes exactly.
+
+Independent web review and lead check passed all nine relative references including homepage anchors. Canonical, metadata, parent copy and preview agree. Fresh extraction from the 35 live PDFs confirms a distinct reflection task. Day 3 navigation recommendations above stand. Browser layout, homepage/sitemap integration, deployment and live verification remain pending for the separate 28 November stage. Existing included tools/local rendering used; no deployment, paid service, tracking, outreach or commercial change.
 
 ## Secondary business work — unpublished
 Number Confidence remains a hypothesis: four weeks/20 parent-led sessions, readiness check, observed-error support and flexible retries; EUR9 untested. Detailed Hide Five sample, answers and adult-response table remain in the archive. Do not repackage free pages as a premium product. Short sessions and household objects alone do not establish differentiation.
